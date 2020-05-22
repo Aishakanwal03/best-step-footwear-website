@@ -1,3 +1,8 @@
+* {
+  margin: 0 !important;
+  padding: 0;
+}
+
 nav{
   background: rgb(92, 89, 89);
   height: 70px;
@@ -8,17 +13,17 @@ nav{
   padding: 0 100px;
   height: 70px;
 }
-nav .ul{
+nav .main-menu{
   float: right;
-  margin-right: 20px;
+  margin-right: 20px !important;
 }
-nav .ul li{
+nav .main-menu li{
   display: inline-block;
   line-height: 70px;
-  margin: 0 5px;
+  margin: 0 5px !important;
   list-style: none;
 }
-nav .ul li a{
+nav .main-menu li a{
   color: white;
   /* font-weight: 500; */
   font-size: 17px;
@@ -29,17 +34,17 @@ nav .ul li a{
   text-decoration: none;
   /* font-family: 'Poppins', sans-serif; */
 }
-a.menu,a:hover{
+a.menu,nav a:hover{
   background: #818283;
   transition: .5s;
   color: white;
 }
-.checkbtn{
+.chk{
   font-size: 20px;
   color: white;
   float: right;
   line-height: 70px;
-  margin-right: 40px;
+  margin-right: 40px !important;
   cursor: pointer;
   display: none;
 }
@@ -54,9 +59,13 @@ a.menu,a:hover{
  
 }
 @media (max-width: 858px){
-  .checkbtn{
+  .chk{
     display: block;
-    margin-right: 40px;
+    margin-right: 20px !important;
+  }
+  .header{
+    /* font-size: 30px; */
+    padding-left: 30px;
   }
   /* .sticky {
     position: sticky;
@@ -64,10 +73,10 @@ a.menu,a:hover{
     width: 100%;
     border: 1px solid rgb(241, 236, 236);
   } */
-  .ul{
+  .main-menu{
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     /* background: #818283; */
     background: linear-gradient(to right,rgb(65, 63, 63), rgb(121, 118, 118), rgb(43, 43, 63));
     top: 70px;
@@ -75,25 +84,193 @@ a.menu,a:hover{
     text-align: center;
     transition: all .5s;
   }
-  nav .ul li{
+  nav .main-menu li{
     display: block;
-    margin: 50px 0;
+    margin: 50px 0 !important;
     line-height: 30px;
   }
-  nav .ul li a{
+  nav .main-menu li a{
     font-size: 16px !important;
   }
-  a:hover,a.menu{
+  nav a:hover,nav a.menu{
     background: none;
     color: #81c2f3 !important;
   }
-  #check:checked ~ .ul{
+  #check:checked ~ .main-menu{
     left: 0;
   }
 }
 .sticky {
-  position: sticky;
+  position: sticky !important;
   top: 0;
   width: 100%;
   border: 1px solid rgb(241, 236, 236);
 }
+
+#footer {
+  /* background: rgb(219, 211, 217); */
+  background: linear-gradient(to right,rgb(65, 63, 63), rgb(121, 118, 118), rgb(43, 43, 63))
+
+}
+.last{
+  color: white;
+  width: 100%;
+  display: flex;
+  /* background: rgb(209, 204, 204); */
+  justify-content: space around;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+
+.last div {
+  margin: 20px 20px 0px 20px !important;
+  width: 280px;
+  text-align: justify;
+  /* color: grey; */
+
+}
+
+@media only screen and (max-width: 1300px){
+  .last div{
+      width: 500px;
+  }
+}
+
+.last .fa {
+  /* color: black; */
+  /* background-color: blue; */
+  border-radius: 30px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  align-items: center;
+
+}
+
+#fb {
+  background-color: rgb(28, 28, 195);
+  margin-top: 5px !important;
+  border-radius: 5px;
+  border: none;
+  font-family: Georgia, serif;
+  padding-right: 10px;
+}
+#whatsapp{
+  background-color:rgb(48, 158, 61) ;
+  margin-top: 10px !important;
+  border: none;
+  border-radius: 5px;
+  font-family: Georgia, serif;
+  padding-right: 10px;
+} 
+#fb:hover a , #whatsapp:hover a {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+#fb:hover , #whatsapp:hover {
+  opacity: 0.8;
+  color: white;
+}
+.last a {
+  /* display: block; */
+  text-decoration: none;
+  /* line-height: 30px; */
+  font-size: 15px;
+  color: white;
+}
+.last .last1 a:hover {
+  color: #81c2f3 !important;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  /* background-color: rgb(187, 184, 186); */
+  /* line-height: 35px; */
+}
+.last p {
+  margin-top: 20px !important;
+}
+.last h4 {
+  color: white;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  text-shadow: 3px 3px 7px white;
+}
+
+/* location.html and signin.html button */
+.shop-menu {
+  display: flex;
+  margin-top: 2px !important; 
+}
+.shop-menu button {
+  flex: 1;
+  text-align: center;
+  margin: 20px !important;
+  text-shadow: 3px 3px 6px ;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  /* flex: auto; */
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 7px;
+  border: 1px solid rgb(207, 207, 98);
+}
+
+.shop-menu a {
+  display: block;
+}
+
+@media only screen and (max-width: 800px){
+  .shop-menu button {
+    margin: 10px !important;
+    /* padding: 5px; */
+    /* font-size: 30px !important; */
+  }
+  h1 {
+    font-size: 30px !important;
+    /* padding: 5px; */
+    line-height: 40px !important;
+  }
+  #contact-us p {
+    font-size: 15px;
+  }
+  #contact-us button {
+    font-size: 18px !important;
+  }
+}
+@media only screen and (max-width: 320px){
+  .shop-menu button h1 {
+    font-size: 22px !important;
+    line-height: 35px !important;
+  }
+}
+
+/* styling of contact us page content */
+
+#contact-us {
+  text-align: center;
+  font-weight: bold;
+}
+#contact-us button{
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 0px 0px 20px 0px !important;
+  color: white !important;
+}
+
+#contact-us a {
+  display: block;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 3px 3px 6px ;
+  /* font-size: 30px !important; */
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+
