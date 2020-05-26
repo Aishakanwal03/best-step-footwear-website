@@ -1,0 +1,22 @@
+.about {
+    margin: 20px auto !important;
+    width: 70%;
+    /* text-align: justify; */
+    text-align: center;
+    line-height: 35px;
+
+}
+.timing {
+    margin: 0px auto 70px auto !important;
+    width: 250px;
+    /* float: left; */
+    /* text-align: center; */
+    /* border: 1px solid black; */
+    
+}
+.timing span {
+    width: 100px;
+    float: left;
+    font-weight: 500;
+    /* font-weight: bold; */
+}
